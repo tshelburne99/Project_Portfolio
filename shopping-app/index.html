@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shopping App</title>
+    <link rel="icon" href=".\assets\icon-192.png" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src=".\assets\dexie.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <p>My list</p>
+    </nav>
+    <div class="container">
+      <form id="itemForm">
+        <label>
+          Item
+          <input type="text" id="nameInput" placeholder="Item Name" required />
+        </label>
+
+        <label>
+          Quantity
+          <input type="number" id="quantityInput" value="1" />
+        </label>
+
+        <label>
+          Price
+          <input type="text" id="priceInput" value="" placeholder="0" />
+        </label>
+
+        <button type="submit" id="addItemButton">Add Item</button>
+      </form>
+    </div>
+
+    <div id="itemsDiv"></div>
+    <div id="totalPriceDiv"></div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

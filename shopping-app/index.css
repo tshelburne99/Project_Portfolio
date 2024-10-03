@@ -1,0 +1,165 @@
+:root {
+    --background-color: #1c1c1e; /* Dark background */
+    --primary-color: #f0c419; /* Soft yellow for highlights */
+    --success-color: #4caf50; /* Green for success */
+    --hover-success-color: #388e3c; /* Darker green on hover */
+    --error-color: #f44336; /* Red for errors */
+    --text-color: #e0e0e0; /* Light text for readability */
+    --border-color: #3a3a3a; /* Dark border color */
+}
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Font Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font */
+    background-color: var(--background-color); /* Dark background */
+    color: var(--text-color); /* Light text for readability */
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--primary-color); /* Soft yellow */
+    color: var(--background-color); /* Dark text on primary background */
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color); /* Dark border for separation */
+}
+
+/* Container for Forms and Items */
+.container {
+    max-width: 600px; /* Limit width for better readability */
+    margin: 20px auto; /* Center the container */
+    background: #2c2c2e; /* Darker background for content */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 15px; /* Space between elements */
+}
+
+label {
+    font-weight: bold; /* Bold labels for clarity */
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="number"] {
+    padding: 10px; /* Add padding for comfort */
+    border: 1px solid var(--border-color); /* Dark border */
+    border-radius: 5px; /* Rounded input corners */
+    transition: border 0.3s; /* Smooth border transition */
+    width: 100%; /* Full width of the parent container */
+    background-color: #3a3a3a; /* Darker background for inputs */
+    color: var(--text-color); /* Light text in inputs */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: var(--primary-color); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(240, 196, 25, 0.5); /* Soft glow effect */
+}
+
+/* Buttons */
+button {
+    padding: 10px; /* Button padding */
+    background-color: var(--primary-color);
+    color: white; /* White text for contrast */
+    border: none;
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+button:hover {
+    transform: scale(1.05); /* Scale up slightly */
+}
+
+/* Items List */
+#itemsDiv {
+    margin-top: 20px; /* Space above item list */
+}
+
+.item {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space out items */
+    padding: 10px; /* Item padding */
+    border: 1px solid var(--border-color); /* Dark border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between items */
+    background-color: #2a2a2e; /* Slightly lighter dark background for items */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.item:hover {
+    background-color: #3a3a3a; /* Slight darkening on hover */
+}
+
+.purchased {
+    text-decoration: line-through; /* Strike-through for purchased items */
+    color: #999; /* Gray color for purchased items */
+}
+
+.checkbox {
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* Remove default styling for Safari */
+    width: 24px; /* Set width for custom checkbox */
+    height: 24px; /* Set height for custom checkbox */
+    border-radius: 50%; /* Make it circular */
+    border: 2px solid var(--primary-color); /* Border color */
+    background-color: transparent; /* Background color */
+    cursor: pointer; /* Cursor style */
+    position: relative; /* Position for pseudo-elements */
+}
+
+/* Style for the checked state */
+.checkbox:checked {
+    background-color: var(--primary-color); /* Background color when checked */
+    border: 2px solid var(--primary-color); /* Keep border color consistent */
+}
+
+/* Add a pseudo-element for the checkmark */
+.checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6); /* Center and scale */
+    width: 12px; /* Width of the checkmark */
+    height: 12px; /* Height of the checkmark */
+    border-radius: 50%; /* Make it circular */
+    background-color: white; /* Color of the checkmark */
+}
+
+/* Total Price Display */
+#totalPriceDiv {
+    font-size: 1.2em; /* Slightly larger font */
+    font-weight: bold; /* Bold for emphasis */
+    margin-top: 15px; /* Space above total price */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Full width on smaller screens */
+    }
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    button {
+        padding: 8px; /* Slightly reduce button padding */
+    }
+}
