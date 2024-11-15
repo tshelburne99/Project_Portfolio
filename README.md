@@ -1,7 +1,7 @@
-# Project_Portfolio
+# Shopping Cart
 Staying sharp :)
 
 
-Working on fontend & backend projects
+Working on full stack to create shopping cart app on dexieDB
 
 Enjoy
